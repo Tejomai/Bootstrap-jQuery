@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Contact Page </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+    <script> 
+        $(document).ready(function(){
+          $("#contact_button").click(function(){
+            $("#contact_details").slideToggle("fast");
+          });
+          $("#email_button").click(function(){
+            $("#email_details").slideToggle("fast");
+          });
+          $("#address_button").click(function(){
+              $("#address_details").slideToggle("fast");
+          });
+        });
+        </script>
+  </head>
+  <body class="bg-dark">
+    <div class="bg-light border p-4 text-center">
+        <h1> Welcome to contact Us page.</h1>
+        <h4>Click below buttons to know more details !</h4>
+    </div>
+    <div class="container-fluid pt-5 pb-3 text-center">
+        <button id="contact_button" class="btn btn-outline-danger text-light btn-lg"> Contact Number</button>
+        <div id="contact_details" class="text-light" style="display: none;">
+            xxxxxxxxxx
+        </div>
+    </div>
+    <div class="container-fluid p-3 text-center">
+        <button id="email_button" class="btn btn-outline-danger text-light btn-lg"> Email Id</button>
+        <div id="email_details" class="text-light" style="display: none;">
+            xxxxxxx@riktamtech.com
+        </div> 
+    </div>
+    <div class="container-fluid p-3 text-center">
+        <button id="address_button" class="btn btn-outline-danger text-light btn-lg"> Address </button>
+        <div id="address_details" style="display: none;"> 
+            <pre class="text-light">
+#101, Wings,
+Srinagar Colony Main Road,
+Near Ameerpet,
+Hyderabad.
+            </pre>
+        </div>
+    </div>
+  </body>
+</html>

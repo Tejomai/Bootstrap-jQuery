@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Home Page </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark sticky-top justify-content-center">
+      <ul class="navbar-nav">
+          <li class="nav-item font-weight-bold">
+            <a class="nav-link text-warning" href="home_page_bootstrap.html">Home</a>
+          </li>
+          <li class="nav-item font-weight-bold">
+            <a class="nav-link text-warning" href="jQuery.html">jQuery</a>
+          </li>
+          <li class="nav-item font-weight-bold">
+            <a class="nav-link text-warning" href="contact_page.html">Contact Us</a>
+          </li>
+        </ul>
+  </nav>
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+    </ul>
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="carousel_img1.png" alt="Welcome" width=100% height="600">
+        <div class="carousel-caption text-center font-weight-bold ">
+            <h1 class="display-2 text-light">Welcome to my site </h1>
+            <h4 class="display-4 text-light">Have a great time</h4>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="carousel_img2.png" alt="Explore" width=100% height="600">
+        <div class="carousel-caption text-light text-center">
+            <h1 class="display-2">You can explore the site ! </h1>
+        </div>
+      </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+
+  <div class="container-fliud p-5 text-center">
+    <h3> You can search anything from below table.</h3>
+    <input id="myInput" type="text" class=" p-1 mt-2 mb-5" placeholder="Search..."/>
+    <table class="table table-bordered table-striped center">
+      <thead class="thead-dark">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+      </thead>
+      <tbody id="myTable">
+      <tr>
+        <td>1</td>
+        <td>Tom</td>
+        <td>tom@example.com</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jerry</td>
+        <td>jerry@example.com</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Ben</td>
+        <td>ben@example.com</td>
+      </tr>
+      </tbody>
+    </table>
+    <h1 class="display-1 text-center pb-5"> Thank you! </h1>
+  </div>
+  </body>
+</html>

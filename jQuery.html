@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> jQuery Page </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+    <script>
+        $(document).ready(function(){
+          jQuery("#hide_button").click(function(){
+            $("#hide_para").hide( function(){
+              alert("The paragraph is now hidden !");
+            });
+          });
+          jQuery("#animate_button").click(function(){
+            jQuery("#enlarge").animate({
+                left: '+=90px',
+                height: '+=90px',
+                width: '+=90px'
+            });
+          });
+        });
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark sticky-top justify-content-center">
+      <ul class="navbar-nav">
+          <li class="nav-item font-weight-bold">
+            <a class="nav-link text-warning" href="home_page_bootstrap.html">Home</a>
+          </li>
+          <li class="nav-item font-weight-bold">
+            <a class="nav-link text-warning" href="jQuery.html">jQuery</a>
+          </li>
+          <li class="nav-item font-weight-bold">
+            <a class="nav-link text-warning" href="contact_page.html">Contact Us</a>
+          </li>
+      </ul>
+    </nav>
+      
+    <div class="container text-center p-5">
+        <button id="hide_button" class="btn p-2 mb-3 btn-outline-dark text-warning btn-lg"> 
+            Click this to hide below text </button>
+        <p id="hide_para"> By clicking the above button, this is going to be hidden. </p> <br>
+        <button id="animate_button" class="btn p-3 mb-3 btn-outline-success text-dark"> 
+          Enlarge below Image
+        </button><br>
+    </div>
+    <img src="butterfly_img.jpeg" id="enlarge" class="pl-5" style="height:100px; width:100px; position:absolute;"/>
+  </body>
+</html>
